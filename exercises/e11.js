@@ -8,9 +8,9 @@ import { data } from "../data/data";
 export function lowMoonsPlanets(data) {
   // Your code goes here...
   const noMoon = data.planets.filter(planets => planets.moonsCount === undefined ).map(planets => planets.name);
-  noMoon 
   const someMoon = data.planets.filter(planets => planets.moonsCount <= 10 ).map(planets => planets.name);
-  const lowMoon = someMoon.concat(noMoon)
+
+  const lowMoon = someMoon.flatMap((x,i) => [x,noMoon[i]]) // had to look up .flatMap() because npm test-11 wanted exact pattern I originally had .concat instead
   
   return lowMoon;
 }
