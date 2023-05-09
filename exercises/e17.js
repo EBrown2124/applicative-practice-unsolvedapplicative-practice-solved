@@ -10,12 +10,28 @@
 
 export function minBy(array, cb) {
   // Your code goes here...
+  let min = array[0]; 
+  for (let i = 0; i < array.length; i++) {
 
+    if (min.age > cb(array[i])) {
+       min = array[i]; 
+      }
+    }
+
+    return min
 }
 
 export function maxBy(array, cb) {
   // Your code goes here...
+  let max = array[0]; 
+  for (let i = 0; i < array.length; i++) {
 
+    if (max.age < cb(array[i])) {
+      max = array[i]; 
+      }
+    }
+
+    return max
 }
 
 
