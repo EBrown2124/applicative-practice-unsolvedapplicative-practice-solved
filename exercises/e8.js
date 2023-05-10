@@ -6,9 +6,8 @@ import { data } from "../data/data";
 
 export function findPlanetNameByMoon(data, moonName) {
   // Your code goes here...
-  const moonPlanet = data.planets
+  return data.planets
   .find((planets) => planets.moons?.includes(moonName)).name;
-  return moonPlanet
 }
  // "?" is shortcut to check a key exist on an object
 
