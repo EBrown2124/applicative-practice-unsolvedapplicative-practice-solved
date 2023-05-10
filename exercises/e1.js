@@ -6,12 +6,10 @@ import { data } from "../data/data";
 
 export function getPlanetNames(data) {
   // Your code goes here...
-  const planet = data.planets.map(planets => planets.name);
+  const planet = data.planets.map((planets) => planets.name);
 
-  return planet
+  return planet;
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-1"

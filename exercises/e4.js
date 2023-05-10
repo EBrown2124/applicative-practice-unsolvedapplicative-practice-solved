@@ -8,13 +8,11 @@ export function getPlanetsWithLowGravity(data) {
   // Your code goes here...
 
   const gav = data.planets
-  .filter(planets => planets.gravity <= 10)
-  .map(planets => planets.name);
-  
-  return gav
-} 
+    .filter((planets) => planets.gravity <= 10)
+    .map((planets) => planets.name);
 
-
+  return gav;
+}
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-4"

@@ -7,13 +7,11 @@ import { data } from "../data/data";
 export function allPlanetsMoonsCount(data) {
   // Your code goes here...
   const total = data.planets
-  .filter(planets => planets.moonsCount !== undefined )
-  .reduce((sum,planets) => sum + planets.moonsCount, 0);
+    .filter((planets) => planets.moonsCount !== undefined)
+    .reduce((sum, planets) => sum + planets.moonsCount, 0);
 
-  return total
+  return total;
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-12"
